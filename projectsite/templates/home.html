@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="content">
+          <div class="container-fluid py-4">
+          <h4 class="page-title mb-4">Home</h4>
+
+          <div class="row g-4">
+            
+            <div class="col-md-3 col-sm-6">
+              <div class="card card-stats  shadow-sm h-100 text-center" style="border: 15px solid #0d6efd;">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                  <h6 class="card-category mb-1 fw-bold fs-5">Tasks</h6>
+                  <h4 class="card-title mb-2">{{ total_tasks }}</h4>
+                  <p class="text-muted text-sm mb-0">
+                    You have a total <span class="text-primary">{{ total_tasks }}</span> tasks created
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <div class="card card-stats  shadow-sm h-100 text-center" style="border: 15px solid #07ca2e;">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                  <p class="card-category mb-1 fw-bold">Completed Tasks</p>
+                  <h4 class="card-title mb-2">{{ completed_tasks }}</h4>
+                  <p class="text-muted text-sm mb-0">
+                    You have <span class="text-primary">{{ completed_tasks }}</span> tasks completed
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <div class="card card-stats shadow-sm h-100 text-center" style="border: 15px solid #eaff00;">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                  <p class="card-category mb-1 fw-bold">Pending Tasks</p>
+                  <h4 class="card-title mb-2">{{ pending_tasks }}</h4>
+                  <p class="text-muted text-sm mb-0">
+                    You still have <span class="text-primary">{{ pending_tasks }}</span> tasks remaining
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <div class="card card-stats shadow-sm h-100 text-center" style="border: 15px solid #05c3ba;">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                  <p class="card-category mb-1 fw-bold">Subtasks</p>
+                  <h4 class="card-title mb-2">{{ total_subtasks }}</h4>
+                  <p class="text-muted text-sm mb-0">
+                    You have <span class="text-primary">{{ total_subtasks }}</span> tremaining.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Page Title</div>
+            <div class="card-category">Page Subtitle</div>
+          </div>
+          <div class="card-body">Hello, World</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
