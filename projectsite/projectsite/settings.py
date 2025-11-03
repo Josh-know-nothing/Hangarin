@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     'Hangarin_app',
     'widget_tweaks',
+    'pwa',
 ]
 
 SITE_ID = 2
@@ -82,7 +83,6 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -163,3 +163,36 @@ ACCOUNT_SIGNUP_FIELDS = [
 "password1*",
 "password2*",
 ]
+
+# --- PWA Settings ---
+PWA_APP_NAME = 'ProjectSite'
+PWA_APP_DESCRIPTION = "A Progressive Web App version of ProjectSite"
+PWA_APP_THEME_COLOR = '#0A0A0A'
+PWA_APP_BACKGROUND_COLOR = '#FFFFFF'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_ORIENTATION = 'portrait'
+PWA_APP_START_URL = '/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/images/img-navbar-card.png',
+        'sizes': '180x124'
+    },
+    {
+        'src': '/static/images/img-navbar-card.png',
+        'sizes': '180x124'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': '/static/images/img-navbar-card.png',
+        'sizes': '180x124'
+    },
+    {
+        'src': '/static/images/img-navbar-card.png',
+        'sizes': '180x124'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')

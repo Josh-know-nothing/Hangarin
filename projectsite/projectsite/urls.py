@@ -27,7 +27,7 @@ from Hangarin_app import views
 
 urlpatterns = [ 
     path('admin/', admin.site.urls),
-    #path('', include('pwa.urls')),
+    path('', include('pwa.urls')),
     path('accounts/',include('allauth.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
     path('', views.HomePageView.as_view(), name='home'),
