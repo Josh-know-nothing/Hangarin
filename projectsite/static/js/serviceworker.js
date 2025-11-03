@@ -5,8 +5,9 @@ self.addEventListener('install', function (e) {
             return cache.addAll([
                 '/',
                 '/static/css/bootstrap.min.css',
+                '/static/js/bootstrap.bundle.min.js',
+                '/static/js/mdb.min.js',
                 '/static/js/main.js',
-                ''
             ]);
         })
     );
