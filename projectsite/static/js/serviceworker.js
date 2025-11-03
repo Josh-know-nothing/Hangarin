@@ -5,8 +5,12 @@ self.addEventListener('install', function (e) {
             return cache.addAll([
                 '/',
                 '/static/css/bootstrap.min.css',
-                '../static/img/profile.jpg',
-                '/static/img/icon.ico',
+                '/static/css/atlantis.min.css',
+                '/static/js/core/jquery.3.2.1.min.js',
+                '/static/js/core/popper.min.js',
+                '/static/js/core/bootstrap.min.js',
+                '/static/js/plugin/webfont/webfont.min.js',
+                '/static/js/atlantis.min.js',
             ]);
         })
     );
